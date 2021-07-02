@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "IWS Scheduling Language",
+	"patterns": [
+		{
+			"include": "#ticketnumber"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#keywords"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "constant.regexp.log",
+					"match": "(STREAMLOGON|SCRIPTNAME|DESCRIPTION|TASKTYPE|RECOVERY|\\$jobs|ONUNTIL|CONT|OPENS|NEEDS|FOLLOWS)"
+				}
+			]
+		},
+		"ticketnumber": {
+			"patterns": [{
+					"begin": "RITM[0-9]{4}",
+					"beginCaptures": {
+						"0": {
+							"name": "comment"
+						}
+					},
+    				"end": "\\n"
+				}
+			]
+		}
+	},
+	"scopeName": "source.iws"
+}

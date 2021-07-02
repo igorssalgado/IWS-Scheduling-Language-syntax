@@ -1,0 +1,25 @@
+{
+    "name": "iws",
+    "displayName": "IWS",
+    "description": "IWS Scheduling Language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "iws",
+            "aliases": ["IWS Scheduling Language", "iws"],
+            "extensions": [".iws"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "iws",
+            "scopeName": "source.iws",
+            "path": "./syntaxes/iws.tmLanguage.json"
+        }]
+    }
+}
